@@ -8,6 +8,6 @@
 4. Ejercicios de patrones Responsive Web Design.
 5. Introducción a Javascript.
 
-### Mientras avance mas en el curso pondre mas proyectos.
+### Mientras avance más en el curso pondré más proyectos.
 
 > Por: Alvaro Gallo Cruz
