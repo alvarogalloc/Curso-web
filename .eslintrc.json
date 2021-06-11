@@ -3,7 +3,6 @@
     "node": true,
     "es2021": true
   },
-  "extends": ["google"],
-  "rules": {
-  }
+  "extends": ["google", "prettier"],
+  "rules": {}
 }

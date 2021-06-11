@@ -5,7 +5,6 @@
 
 const arr = [1, 2, 3, 3, 1, 2, 3, 4, 5, 6, 7];
 
-
 // Por constructor
 // const arr2 = new Array('Enero', 'Febrero','Marzo');
 
@@ -19,7 +18,6 @@ const arr = [1, 2, 3, 3, 1, 2, 3, 4, 5, 6, 7];
 // arr.forEach((element) => {
 //   console.log(element);
 // });
-
 
 // Metodo 1: Metodo Array.push()
 arr.push('Hola');
@@ -40,9 +38,7 @@ arr.unshift('Al principio pa');
 // Eliminar elementos a partir de un indice
 // param 1: indicar donde empieza a eliminar
 // param 2: Cuanto elementos a eliminar a partir de param 1
-
-arr.slice(2, 1);
-
+arr.splice(2, 1);
 // Los metodos anteriores no son recomendados
 // por que mutan el arrego inicial.
 // Es recomendable hacer copias con Spread operator '...'
