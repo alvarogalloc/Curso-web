@@ -3,6 +3,6 @@
     "node": true,
     "es2021": true
   },
-  "extends": ["google", "prettier"],
-  "rules": {}
+  "extends": ["prettier","google"],
+  "rules": {"linebreak-style":"off"}
 }
