@@ -3,12 +3,12 @@ const meses = ['enero', 'febrero', 'marzo', 'abril'];
 const carrito = [
   {
     nombre: 'monitor 20 pulg',
-    precio: 700,
+    precio: 700
   },
   {
     nombre: 'celular',
-    precio: 1000,
-  },
+    precio: 1000
+  }
 ];
 
 // for each
@@ -20,10 +20,9 @@ const carrito = [
 
 // includes method
 console.log(meses.includes('marzo'));
-
 // some method: recomendado para arreglos de objetos
 console.log(
-    carrito.some(function(producto) {
-      return producto.nombre === 'celular';
-    }),
+  carrito.some(function (producto) {
+    return producto.nombre === 'celular';
+  })
 );
