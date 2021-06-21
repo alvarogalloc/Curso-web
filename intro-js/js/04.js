@@ -1,5 +1,4 @@
 // Strings
-
 const tweet = 'Aprendiendo JS con Juan';
 const producto2 = String('Monitor 30 pulgadas');
 const email = 'correo@gmail.com';
