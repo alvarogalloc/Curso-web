@@ -5,12 +5,15 @@
         "node": true
     },
     "extends": [
-        "xo"
+        "airbnb-base"
     ],
     "parserOptions": {
-        "ecmaVersion": 12,
-        "sourceType": "module"
+        "ecmaVersion": 12
     },
     "rules": {
+      "no-console": "off",
+      "no-plusplus": "off",
+      "func-names": ["error", "as-needed"],
+      "max-classes-per-file": ["error", 5]
     }
 }
