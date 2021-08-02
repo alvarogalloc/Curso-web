@@ -1,6 +1,8 @@
 # Curso web
 
-## Este es un curso que hice en udemy, aqui se encuentran distintos projectos que hice durante este curso como:
+## Curso de desarrollo web completo con html, css/sass, javascript, mysql, php y diseño MVC.
+
+### Este es un curso que hice en udemy, aqui se encuentran distintos projectos que hice durante este curso como:
 
 1. Pagina de freelancer.
 2. Blog de Café.
