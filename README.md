@@ -1,6 +1,6 @@
 # Curso web
 
-## Curso de desarrollo web completo con html, css/sass, javascript, mysql, php y diseño MVC.
+## Curso de desarrollo web completo con html, css/sass, gulp, javascript, mysql, php y diseño MVC.
 
 ### Este es un curso que hice en udemy, aqui se encuentran distintos projectos que hice durante este curso como:
 
