@@ -9,6 +9,8 @@
 3. Front end Store.
 4. Ejercicios de patrones Responsive Web Design.
 5. Introducción a Javascript.
+6. Dom scripting con javascript.
+7. Festival Música.
 
 ### Mientras avance más en el curso pondré más proyectos.
 
