@@ -1,4 +1,4 @@
-console.log("holamundo");
+
 const mostrarImagen = (ev) => {
   console.log(ev.target.dataset.imagenId);
   const id = parseInt(ev.target.dataset.imagenId, 10);
