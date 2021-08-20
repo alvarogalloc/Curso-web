@@ -33,8 +33,9 @@ function javascript() {
   return src(paths.js).pipe(concat('bundle.js')).pipe(dest('build/js'));
 }
 
-function livecss() {
+function watchArchivos() {
   watch(paths.scss, css); // * -> carpeta actual, ** -> todos los archivos con esa extension
+  watch(paths.js, javascript);
 }
 
 function versionWebp() {
@@ -46,6 +47,6 @@ exports.css = css;
 exports.cssmini = cssmini;
 exports.versionWebp = versionWebp;
 exports.imagenes = imagenes;
-exports.livecss = livecss;
+exports.livecss = watchArchivos;
 exports.javacript = javascript;
-exports.default = series(css, javascript, imagenes, versionWebp, livecss);
+exports.default = series(css, javascript, imagenes, versionWebp, watchArchivos);

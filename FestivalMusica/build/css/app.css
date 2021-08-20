@@ -353,6 +353,9 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 1.6rem;
 }
+body.fijar-body {
+  overflow: hidden;
+}
 
 p {
   font-size: 2rem;
@@ -572,23 +575,60 @@ ul {
   background-color: #fef254;
 }
 
+.galeria {
+  padding: 5rem 0;
+}
 .galeria h3 {
   text-align: center;
 }
-.galeria .galeria-imagenes {
+
+.galeria-imagenes {
+  padding: 0;
+  margin-top: 5rem;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5rem;
+}
+@media only screen and (min-width: 768px) {
+  .galeria-imagenes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .galeria-imagenes {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2.5rem;
+  }
 }
 
-body {
-  font-family: "Montserrat", sans-serif;
+.overlay {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: grid;
+  place-items: center;
+}
+@media only screen and (min-width: 768px) {
+  .overlay img {
+    max-width: 50%;
+  }
 }
 
-h1 {
-  font-family: "Montserrat", sans-serif;
+.btn-cerrar {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  font-size: 3rem;
+  background-color: #fff;
+  display: grid;
+  place-items: center;
+  font-weight: 900;
 }
-
-p {
-  font-family: "Montserrat", sans-serif;
+.btn-cerrar:hover {
+  cursor: pointer;
 }
