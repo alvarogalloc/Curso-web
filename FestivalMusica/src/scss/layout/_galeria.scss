@@ -1,0 +1,8 @@
+.galeria {
+  h3 {
+    text-align: center;
+  }
+  .galeria-imagenes {
+    @include grid(6, 1rem);
+  }
+}
