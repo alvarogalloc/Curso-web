@@ -1,7 +1,7 @@
 const scrollNav = () => {
   const enlaces = document.querySelectorAll('.navegacion-principal a');
   enlaces.forEach(enlace => {
-    enlace.addEventListener('click', ev => {
+    enlace.addEventListener('click', (ev) => {
       ev.preventDefault();
       const seccion = document.querySelector(ev.target.attributes.href.value);
       seccion.scrollIntoView({ behavior: 'smooth' });
@@ -12,7 +12,7 @@ const scrollNav = () => {
 const navFija = () => {
   // Registrar el intersection observer
   const barra = document.querySelector('.header');
-  const observer = new IntersectionObserver(entries => {
+  const observer = new IntersectionObserver((entries) => {
     if (entries[0].isIntersecting) {
       barra.classList.remove('fijo');
     } else {
