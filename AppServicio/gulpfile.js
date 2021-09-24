@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 const {
   src, dest, watch, parallel,
 } = require('gulp');
@@ -36,8 +37,8 @@ function javascript() {
     .pipe(sourcemaps.init())
     .pipe(concat('bundle.js')) // final output file name
     .pipe(terser())
-    .pipe(sourcemaps.write('.'))
     .pipe(rename({ suffix: '.min' }))
+    .pipe(sourcemaps.write('.'))
     .pipe(dest('./build/js'));
 }
 

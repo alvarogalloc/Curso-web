@@ -2,53 +2,53 @@
     "servicios": [
         {
             "id": 1,
-            "nombre": "Corte de Cabello Adulto",
-            "precio": 80
+            "nombre": "Cambio de Aceite",
+            "precio": 200
         },
         {
             "id": 2,
-            "nombre": "Corte de Cabello Niño",
-            "precio": 60
-        },
-        {
-            "id": 3,
-            "nombre": "Corte de Cabello Mujer",
-            "precio": 100
-        },
-        {
-            "id": 4,
-            "nombre": "Corte de Barba",
-            "precio": 100
-        },
-        {
-            "id": 5,
-            "nombre": "Peinado Hombre",
-            "precio": 60
-        },
-        {
-            "id": 6,
-            "nombre": "Peinado Mujer",
-            "precio": 100
-        },
-        {
-            "id": 7,
-            "nombre": "Tinte",
+            "nombre": "Afinación de Frenos",
             "precio": 300
         },
         {
+            "id": 3,
+            "nombre": "Cambio de Llanta",
+            "precio": 700
+        },
+        {
+            "id": 4,
+            "nombre": "Mantenimiento General",
+            "precio": 150
+        },
+        {
+            "id": 5,
+            "nombre": "Tapizado",
+            "precio": 3000
+        },
+        {
+            "id": 6,
+            "nombre": "Suspensión",
+            "precio": 2000
+        },
+        {
+            "id": 7,
+            "nombre": "Pintura",
+            "precio": 1000
+        },
+        {
             "id": 8,
-            "nombre": "Uñas",
-            "precio": 400
+            "nombre": "Blindado",
+            "precio": 700
         },
         {
             "id": 9,
-            "nombre": "Lavado de Cabello",
+            "nombre": "Accesorios",
             "precio": 50
         },
         {
             "id": 10,
-            "nombre" : "Tratamiento Capilar",
-            "precio": 150
+            "nombre" : "Limpieza",
+            "precio": 350
         }
     ]
 }
