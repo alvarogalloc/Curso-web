@@ -22,5 +22,11 @@
       color: $azul;
       margin: 0;
     }
+    &.seleccionado {
+      background-color: $azul;
+      p {
+        color: $blanco;
+      }
+    }
   }
 }

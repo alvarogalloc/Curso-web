@@ -1,5 +1,16 @@
 const seleccionarServicio = (e) => {
-  console.log(e.target);
+  let elemento;
+  if (e.target.tagName === 'P') {
+    elemento = e.target.parentElement;
+  } else {
+    elemento = e.target;
+  }
+
+  if (elemento.classList.contains('seleccionado')) {
+    elemento.classList.remove('seleccionado');
+  } else {
+    elemento.classList.add('seleccionado');
+  }
 };
 
 const mostrarSevicios = async () => {
@@ -10,7 +21,7 @@ const mostrarSevicios = async () => {
     const { servicios } = db;
 
     servicios.forEach(servicio => {
-      const { nombre, precio } = servicio;
+      const { id, nombre, precio } = servicio;
 
       // DOM things
       // Generar nombre de servicio
@@ -26,6 +37,7 @@ const mostrarSevicios = async () => {
       // Generar div contenedor de servicio
       const servicioDiv = document.createElement('div');
       servicioDiv.classList.add('servicio');
+      servicioDiv.dataset.idServicio = id;
 
       // Selecciona un servicio para el carrito
       servicioDiv.onclick = seleccionarServicio;
