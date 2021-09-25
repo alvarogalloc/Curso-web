@@ -1,3 +1,7 @@
+const seleccionarServicio = (e) => {
+  console.log(e.target);
+};
+
 const mostrarSevicios = async () => {
   try {
     const resultado = await fetch('./servicios.json');
@@ -6,7 +10,7 @@ const mostrarSevicios = async () => {
     const { servicios } = db;
 
     servicios.forEach(servicio => {
-      const { id, nombre, precio } = servicio;
+      const { nombre, precio } = servicio;
 
       // DOM things
       // Generar nombre de servicio
@@ -23,13 +27,15 @@ const mostrarSevicios = async () => {
       const servicioDiv = document.createElement('div');
       servicioDiv.classList.add('servicio');
 
+      // Selecciona un servicio para el carrito
+      servicioDiv.onclick = seleccionarServicio;
+
       // Inyectar precio y nombre a div de servicio
       servicioDiv.appendChild(nombreServicio);
       servicioDiv.appendChild(precioServicio);
 
       // Inyectarlo en el html
       document.querySelector('#servicios').appendChild(servicioDiv);
-      console.log(servicioDiv);
     });
   } catch (error) {
     console.log(error);

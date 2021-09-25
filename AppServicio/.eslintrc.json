@@ -1,20 +1,21 @@
 {
-  "env": {
-    "browser": true,
-    "es2021": true,
-    "node": true
-  },
-  "extends": ["airbnb"],
-  "parserOptions": {
-    "ecmaVersion": 12
-  },
-  "rules": {
-    "comma-dangle": "off",
-    "no-console": "off",
-    "no-plusplus": "off",
-    "func-names": ["error", "as-needed"],
-    "arrow-parens": "off",
-    "prefer-promise-reject-errors": "off",
-    "max-classes-per-file": ["error", 5]
+    "env": {
+      "browser": true,
+      "node": true,
+      "commonjs": true
+    },
+    "extends": "airbnb-base",
+    "parserOptions": {
+      "ecmaVersion": 12
+    },
+    "rules": {
+      "comma-dangle": "off",
+      "no-console": "off",
+      "no-plusplus": "off",
+      "func-names": ["error", "as-needed"],
+      "arrow-parens": "off",
+      "prefer-promise-reject-errors": "off",
+      "max-classes-per-file": ["error", 5]
+    }
   }
-}
+  
