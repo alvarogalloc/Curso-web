@@ -54,8 +54,84 @@ const mostrarSevicios = async () => {
   }
 };
 
+let pagina = 1;
+
+const mostrarSeccion = () => {
+  const seccionActual = document.querySelector(`#paso-${pagina}`);
+  seccionActual.classList.add('mostrar-seccion');
+
+  // Resalta el Tab inicial
+  const tab = document.querySelector(`[data-paso="${pagina}"]`);
+  tab.classList.add('actual');
+};
+
+const cambiarSeccion = () => {
+  const enlaces = document.querySelectorAll('.tabs button');
+
+  enlaces.forEach(enlace => {
+    enlace.addEventListener('click', e => {
+      e.preventDefault();
+
+      // Eliminar .mostrar-seccion de la seccion anterior
+      document.querySelector('.mostrar-seccion').classList.remove('mostrar-seccion');
+
+      // Mostrar seccion por el enlace seleccionado
+      pagina = parseInt(e.target.dataset.paso, 10);
+      const seccion = document.querySelector(`#paso-${pagina}`);
+      seccion.classList.add('mostrar-seccion');
+
+      // Eliminar .actual en el tab anterior
+      document.querySelector('.tabs .actual').classList.remove('actual');
+
+      // Agregar .actual al nuevo tab
+      const tab = document.querySelector(`[data-paso="${pagina}"]`);
+      tab.classList.add('actual');
+    });
+  });
+};
+
+const paginaSiguiente = () => {
+  const botonSiguiente = document.querySelector('#siguiente');
+  botonSiguiente.addEventListener('click', () => {
+    pagina++;
+    console.log(pagina);
+  });
+};
+
+const paginaAnterior = () => {
+  const botonAnterior = document.querySelector('#anterior');
+  botonAnterior.addEventListener('click', () => {
+    pagina--;
+    console.log(pagina);
+  });
+};
+
+const botonesPaginador = () => {
+  const botonSiguiente = document.querySelector('#siguiente');
+  const botonAnterior = document.querySelector('#anterior');
+
+  if (pagina === 1) {
+    botonAnterior.classList.add('ocultar');
+  } else if (pagina === 3) {
+    botonSiguiente.classList.add('ocultar');
+  }
+};
+
 const iniciarApp = () => {
   mostrarSevicios();
+
+  // Reslta el Div actual segun el tab presionado
+  mostrarSeccion();
+
+  // Oculta o muestra la seccion segun el tab seleccionado
+  cambiarSeccion();
+
+  // Mostrar siguiente pagina y anterior pagina
+  paginaSiguiente();
+  paginaAnterior();
+
+  // Ocultar o mostrar boton siguiente/anterior
+  botonesPaginador();
 };
 
 document.addEventListener('DOMContentLoaded', () => {

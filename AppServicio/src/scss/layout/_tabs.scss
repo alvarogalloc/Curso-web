@@ -8,8 +8,13 @@
     text-align: center;
     border: none;
     border-radius: 5px;
+
     &:hover {
       cursor: pointer;
     }
+  }
+  .actual {
+    background-color: $verde;
+    color: $blanco
   }
 }
