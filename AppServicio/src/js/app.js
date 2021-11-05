@@ -1,4 +1,4 @@
-const seleccionarServicio = (e) => {
+const seleccionarServicio = e => {
   let elemento;
   if (e.target.tagName === 'P') {
     elemento = e.target.parentElement;
@@ -73,7 +73,9 @@ const cambiarSeccion = () => {
       e.preventDefault();
 
       // Eliminar .mostrar-seccion de la seccion anterior
-      document.querySelector('.mostrar-seccion').classList.remove('mostrar-seccion');
+      document
+        .querySelector('.mostrar-seccion')
+        .classList.remove('mostrar-seccion');
 
       // Mostrar seccion por el enlace seleccionado
       pagina = parseInt(e.target.dataset.paso, 10);
@@ -81,7 +83,9 @@ const cambiarSeccion = () => {
       seccion.classList.add('mostrar-seccion');
 
       // Eliminar .actual en el tab anterior
-      document.querySelector('.tabs .actual').classList.remove('actual');
+      document
+        .querySelector('.tabs .actual')
+        .classList.remove('actual');
 
       // Agregar .actual al nuevo tab
       const tab = document.querySelector(`[data-paso="${pagina}"]`);

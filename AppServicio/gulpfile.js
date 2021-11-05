@@ -1,11 +1,8 @@
-/* eslint-disable import/no-extraneous-dependencies */
-const {
-  src, dest, watch, parallel,
-} = require('gulp');
-const sass = require('gulp-sass');
+const { src, dest, watch, parallel } = require('gulp');
+const sass = require('gulp-sass')(require('sass'));
 const autoprefixer = require('autoprefixer');
 const postcss = require('gulp-postcss');
-const sourcemaps = require('gulp-sourcemaps');
+const { init, write } = require('gulp-sourcemaps');
 const cssnano = require('cssnano');
 const concat = require('gulp-concat');
 const terser = require('gulp-terser-js');
@@ -18,27 +15,29 @@ const webp = require('gulp-webp');
 const paths = {
   scss: 'src/scss/**/*.scss',
   js: 'src/js/**/*.js',
-  imagenes: 'src/img/**/*',
+  imagenes: 'src/img/**/*'
 };
 
 // css es una función que se puede llamar automaticamente
 function css() {
-  return src(paths.scss)
-    .pipe(sourcemaps.init())
-    .pipe(sass())
-    .pipe(postcss([autoprefixer(), cssnano()]))
-  // .pipe(postcss([autoprefixer()]))
-    .pipe(sourcemaps.write('.'))
-    .pipe(dest('./build/css'));
+  return (
+    src(paths.scss)
+      .pipe(init())
+      .pipe(sass())
+      .pipe(postcss([autoprefixer(), cssnano()]))
+      .pipe(postcss([autoprefixer()]))
+      .pipe(write('.'))
+      .pipe(dest('./build/css'))
+  );
 }
 
 function javascript() {
   return src(paths.js)
-    .pipe(sourcemaps.init())
+    .pipe(init())
     .pipe(concat('bundle.js')) // final output file name
     .pipe(terser())
     .pipe(rename({ suffix: '.min' }))
-    .pipe(sourcemaps.write('.'))
+    .pipe(write('.'))
     .pipe(dest('./build/js'));
 }
 
@@ -63,6 +62,21 @@ function watchArchivos() {
   watch(paths.imagenes, versionWebp);
 }
 
-exports.css = css;
-exports.watchArchivos = watchArchivos;
-exports.default = parallel(css, javascript, imagenes, versionWebp, watchArchivos);
+const _default = parallel(
+    css,
+    javascript,
+    imagenes,
+    versionWebp,
+    watchArchivos
+);
+export { _default as default };
+const _watchArchivos = watchArchivos;
+export { _watchArchivos as watchArchivos };
+const _default = parallel(
+    css,
+    javascript,
+    imagenes,
+    versionWebp,
+    watchArchivos
+);
+export { _default as default };

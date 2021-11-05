@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 .listado-servicios {
   @include tablet {
     @include grid(2, 2rem);
@@ -5,11 +7,11 @@
 
   .servicio {
     background-color: $blanco;
-    padding: $separacion / 2;
+    padding: math.div($separacion, 2);
     border-radius: 1rem;
     width: 95%;
     margin: 0 auto;
-    margin-bottom: $separacion / 3;
+    margin-bottom: math.div($separacion, 2);
     &:last-of-type {
       margin-bottom: 0;
     }
@@ -20,7 +22,7 @@
     }
 
     p {
-      margin: 0 0 $separacion / 4 0;
+      margin: 0 0 math.div($separacion, 4) 0;
     }
 
     .nombre-servicio {

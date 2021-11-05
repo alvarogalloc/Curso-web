@@ -1,7 +1,7 @@
 .paginacion {
   display: flex;
   justify-content: space-between;
-  margin-top: $separacion;
+  margin: $separacion auto;
 
   button {
     background-color: $verde;
