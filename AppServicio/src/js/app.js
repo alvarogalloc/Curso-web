@@ -5,13 +5,12 @@ const seleccionarServicio = e => {
   } else {
     elemento = e.target;
   }
-
   if (elemento.classList.contains('seleccionado')) {
     elemento.classList.remove('seleccionado');
   } else {
     elemento.classList.add('seleccionado');
   }
-};
+}
 
 const mostrarSevicios = async () => {
   try {
