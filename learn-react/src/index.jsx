@@ -1,10 +1,8 @@
-import ReactDOM from 'react-dom'
-import PrimeraApp from './PrimeraApp'
+import { createRoot } from 'react-dom/client'
+import React from 'react'
 import './index.css'
+import CounterApp from './CounterApp'
 
-const root = document.querySelector('#root')
-
-ReactDOM.render(
-  <PrimeraApp />,
-  root
-)
+const container = document.querySelector('#root')
+const root = createRoot(container)
+root.render(<CounterApp value={10} />)
