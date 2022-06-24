@@ -1,8 +1,8 @@
-import React from "react";
-import { useCounter } from "../hooks/useCounter";
+import React from 'react'
+import { useCounter } from '../hooks/useCounter'
 
 export const CounterAppWithCustomHook = () => {
-  const { counter, increment, decrement, reset } = useCounter(1);
+  const { counter, increment, decrement, reset } = useCounter(1)
   return (
     <>
       <h1>Counter with custom hook: {counter}</h1>
@@ -17,5 +17,5 @@ export const CounterAppWithCustomHook = () => {
         -1
       </button>
     </>
-  );
-};
+  )
+}

@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React, { useState } from 'react'
 
 export function CounterApp() {
   const [state, setCount] = useState({
     counter1: 0,
     counter2: 10,
     counter3: 20,
-  });
-  const { counter1, counter2, counter3 } = state;
+  })
+  const { counter1, counter2, counter3 } = state
   return (
     <>
       <h1>Counter: {counter1}</h1>
@@ -25,5 +25,5 @@ export function CounterApp() {
         +1
       </button>
     </>
-  );
+  )
 }

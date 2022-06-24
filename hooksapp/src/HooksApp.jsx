@@ -1,5 +1,5 @@
-import React from "react";
-import logo from "./logo.svg";
+import React from 'react'
+import logo from './logo.svg'
 
 function HooksApp() {
   return (
@@ -7,7 +7,7 @@ function HooksApp() {
       <h1>Hello World</h1>
       <img src={logo} alt="logo" width={100} />
     </div>
-  );
+  )
 }
 
-export default HooksApp;
+export default HooksApp
